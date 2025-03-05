@@ -18,8 +18,7 @@ export async function POST(req: Request) {
   try {
     await connectToDatabase();
     const body = await req.json();
-
-    if (!body.amount || !body.date || !body.description) {
+    if (!body.amount || !body.date || !body.description || !body.category) {
       return NextResponse.json({ message: "Missing required fields" }, { status: 400 });
     }
 

@@ -1,20 +1,11 @@
 import Calendar from "@/components/calender";
-import Sidebar from "@/components/sidebar";
 import Image from "next/image";
 
 export default function Page() {
   return (
-    <div className="flex flex-col md:flex-row min-h-screen bg-gray-100">
-      <Sidebar />
-      <div className="px-5 md:py-5 flex-1">
-        <div className="hidden md:flex items-center gap-4">
-          <div className="flex-1 h-20 bg-blue-600"></div>
-          <h1 className="text-2xl md:text-4xl font-bold text-gray-800 uppercase">
-           Finance Visualizer
-          </h1>
-        </div>
-
-        <div className="grid grid-cols-1 lg:grid-cols-2  gap-12 py-6">
+    <div className="min-h-screen bg-gray-100">
+      <div className=" flex-1">
+        <div className="grid px-5 md:py-5 grid-cols-1 lg:grid-cols-2  gap-12 py-6">
           <div className="w-full flex">
             <Image
               src="/img/finance-1.svg"
@@ -24,7 +15,6 @@ export default function Page() {
             />
           </div>
 
-  
           <div>
             <p className="mt-4 text-gray-600">
               Take control of your finances with our interactive visualizer.
@@ -41,8 +31,8 @@ export default function Page() {
             </button>
           </div>
         </div>
-  
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 gap-6 py-6">
+
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 gap-6 py-6 px-5">
           <div className="bg-white shadow-lg rounded-lg p-6 border-l-4 border-blue-500">
             <h2 className="text-lg font-semibold text-gray-900">
               Track Transactions
